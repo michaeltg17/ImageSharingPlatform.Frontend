@@ -1,2 +1,0 @@
-# ImageSharingPlatform.Frontend
-# ImageSharingPlatform.Frontend
