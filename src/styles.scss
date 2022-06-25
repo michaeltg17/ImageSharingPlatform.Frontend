@@ -1,0 +1,18 @@
+@import '~@angular/material/theming';
+
+// Includes all common styles that are used by multiple Angular Material components
+@include mat-core();
+
+// Define your application's custom theme.
+$primary-palette: mat-palette($mat-teal);
+$accent-palette:  mat-palette($mat-pink, A200, A100, A400);
+$theme: mat-dark-theme(
+  $primary-palette,
+  $accent-palette,
+);
+
+// Include theme styles for Angular Material components and each component used in your app.
+@include angular-material-theme($theme);
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
