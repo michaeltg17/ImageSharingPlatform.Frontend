@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-image-upload',
   templateUrl: './image-upload.component.html',
   styleUrls: ['./image-upload.component.scss']
 })
-export class ImageUploadComponent implements OnInit {
+export class ImageUploadComponent {
 
-  username = "";
+  form: FormGroup;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private fb: FormBuilder) {
+    this.form = this.fb.group({
+      image: [null, [Validators.required]],
+    });
   }
 
   onUpload() {

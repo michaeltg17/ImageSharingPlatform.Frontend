@@ -1,10 +1,12 @@
 <div class="wrapper">
   <h1>Upload an image</h1>
 
-  <mat-form-field>
-    <ngx-mat-file-input formControlName="basicfile" placeholder="Select an image" ></ngx-mat-file-input>
-    <mat-icon matSuffix>folder</mat-icon>
-  </mat-form-field>
-  <button class="uploadButton" mat-raised-button color="primary" (click)="onUpload()">Upload</button>
+  <form class="appForm" [formGroup]="form" (ngSubmit)="onUpload()">
+    <mat-form-field>
+      <ngx-mat-file-input formControlName="image" placeholder="Select an image" ></ngx-mat-file-input>
+      <mat-icon matSuffix>folder</mat-icon>
+    </mat-form-field>
+    <button class="uploadButton" mat-raised-button color="primary" type="submit" [disabled]="!form.valid">Upload</button>
+  </form>
 
 </div>
