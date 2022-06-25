@@ -15,4 +15,4 @@ $theme: mat-dark-theme(
 @include angular-material-theme($theme);
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 25px; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,11 +1,10 @@
 <div class="wrapper">
   <h1>Upload an image</h1>
 
-  <mat-form-field appearance="outline">
-    <mat-label>Username</mat-label>
-    <input matInput placeholder="x@it-minds.dk" type="text"
-        autocomplete="off" value="username" required>
+  <mat-form-field>
+    <ngx-mat-file-input formControlName="basicfile" placeholder="Select an image" ></ngx-mat-file-input>
+    <mat-icon matSuffix>folder</mat-icon>
   </mat-form-field>
+  <button class="uploadButton" mat-raised-button color="primary" (click)="onUpload()">Upload</button>
 
-  <button mat-raised-button color="primary" (click)="onUpload()">Upload</button>
 </div>
