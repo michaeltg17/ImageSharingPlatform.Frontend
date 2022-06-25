@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ImageService } from '../../services/image.service'
+import { FileInput } from 'ngx-material-file-input';
 
 @Component({
   selector: 'app-image-upload',
@@ -17,7 +18,9 @@ export class ImageUploadComponent {
     });
   }
 
-  onUpload() {
-    this.imageService.uploadImage(this.form.value.image);
+  async onUpload() {
+    const file_form: FileInput = this.form.get('image')?.value;
+    const file = file_form.files[0]; // in case user didn't selected multiple files
+    await this.imageService.uploadImage(file).toPromise();
   }
 }

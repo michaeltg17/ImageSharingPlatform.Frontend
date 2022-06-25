@@ -9,9 +9,9 @@ export class ImageService {
 
   constructor(private http: HttpClient) {}
 
-  public uploadImage(image: File): Observable<object> {
+  public uploadImage(file: File): Observable<Object> {
     const formData = new FormData();
-    formData.append('image', image);
-    return this.http.post('https://localhost:49161/Image', formData);
+    formData.append('image', file);
+    return this.http.post('https://localhost:49165/Image', formData);
   }
 }
