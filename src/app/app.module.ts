@@ -11,11 +11,13 @@ import { MaterialFileInputModule } from 'ngx-material-file-input';
 import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http';
+import { ImageLinkComponent } from './components/image-link/image-link.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ImageUploadComponent,
+    ImageLinkComponent,
   ],
   imports: [
     BrowserModule,

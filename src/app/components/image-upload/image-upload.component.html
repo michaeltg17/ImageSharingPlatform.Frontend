@@ -10,3 +10,6 @@
   </form>
 
 </div>
+<div *ngIf="isImageUplodaded">
+  <app-image-link  [imageUrl]="imageGroup.images[0].url" [imageResolution]="imageGroup.images[0].resolution"></app-image-link>
+</div>
