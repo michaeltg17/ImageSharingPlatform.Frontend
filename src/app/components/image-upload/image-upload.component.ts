@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ImageService } from '../../services/image.service'
 import { FileInput } from 'ngx-material-file-input';
 import { ImageGroup } from '../../models/image-group.model';
+import { Image } from '../../models/image.model';
 
 @Component({
   selector: 'app-image-upload',
@@ -13,7 +14,7 @@ export class ImageUploadComponent {
 
   form: FormGroup;
   isImageUplodaded: boolean;
-  public imageGroup: ImageGroup;
+  imageGroup: ImageGroup;
 
   constructor(private fb: FormBuilder, public imageService: ImageService) {
     this.form = this.fb.group({

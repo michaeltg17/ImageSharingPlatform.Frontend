@@ -1,0 +1,13 @@
+@import '../../../styles.scss';
+
+p{
+  color: mat-color($primary-palette);
+  font: 400 16px Roboto, "Helvetica Neue", sans-serif;
+  margin-bottom: 5px;
+}
+
+a{
+  color: white;
+  font: 400 16px Roboto, "Helvetica Neue", sans-serif;
+  margin-bottom: 10px;
+}

@@ -9,7 +9,8 @@
     <button class="uploadButton" mat-raised-button color="primary" type="submit" [disabled]="!form.valid">Upload</button>
   </form>
 
-</div>
-<div *ngIf="isImageUplodaded">
-  <app-image-link  [imageUrl]="imageGroup.images[0].url" [imageResolution]="imageGroup.images[0].resolution"></app-image-link>
+  <div class="links" *ngIf="isImageUplodaded">
+      <app-image-link class="link" *ngFor="let image of imageGroup.images" [imageUrl]="image.url" [imageResolution]="image.resolution"></app-image-link>
+  </div>
+
 </div>
