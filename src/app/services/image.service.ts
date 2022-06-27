@@ -21,6 +21,7 @@ export class ImageService {
   public uploadImage(file: File): Observable<ImageGroup> {
     const formData = new FormData();
     formData.append('file', file);
-    return this.http.post<ImageGroup>('https://localhost:49165/Image', formData);
+    //This url (the domain part) should be in environment settings or outside source control
+    return this.http.post<ImageGroup>('https://localhost:49163/Image', formData);
   }
 }
